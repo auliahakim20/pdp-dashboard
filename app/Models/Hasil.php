@@ -20,6 +20,7 @@ class Hasil extends Model
    ];
 
    protected $fillable = [
+    'name',
     'accuracy',
     'precission',
     'recall',

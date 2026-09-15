@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::middleware([
     'auth:sanctum',
@@ -25,4 +25,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+  
+    Route::get('/hasil', \App\Http\Livewire\HasilIndex::class)->name('hasil.index');
+    Route::get('/wilayah', \App\Http\Livewire\WilayahIndex::class)->name('wilayah.index');
 });

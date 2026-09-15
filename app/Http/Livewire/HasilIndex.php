@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Hasil;
 use Livewire\Component;
 
 class HasilIndex extends Component
 {
     public function render()
     {
-        return view('livewire.hasil-index');
+        $data = Hasil::orderBy('tanggal')->get();
+        return view('livewire.hasil-index',[
+            'data' => $data,
+        ]);
     }
 }
