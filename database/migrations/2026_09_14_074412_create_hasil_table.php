@@ -15,9 +15,10 @@ class CreateHasilTable extends Migration
     {
         Schema::create('hasil', function (Blueprint $table) {
             $table->id();
-            $table->double('accuracy');
-            $table->double('recall');
-            $table->double('f_score');
+            $table->decimal('accuracy', 5, 2);
+            $table->decimal('recall', 5, 2);
+            $table->decimal('f_score', 5, 2);
+            $table->decimal('precision', 5, 2);
             $table->timestamps();
             $table->softDeletes();
         });
