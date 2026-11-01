@@ -12,12 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', \App\Http\Livewire\HasilIndex::class)->name('home');
+Route::get('/hasil-pengujian', \App\Http\Livewire\HasilIndex::class)->name('pengujian.index');
+Route::get('/wilayah', \App\Http\Livewire\WilayahIndex::class)->name('wilayah.index');
+
 
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
-Route::middleware([
+ /*
+//Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -28,4 +32,8 @@ Route::middleware([
   
     Route::get('/hasil', \App\Http\Livewire\HasilIndex::class)->name('hasil.index');
     Route::get('/wilayah', \App\Http\Livewire\WilayahIndex::class)->name('wilayah.index');
-});
+    
+
+}); */
+
+

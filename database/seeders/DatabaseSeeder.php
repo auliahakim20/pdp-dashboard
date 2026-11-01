@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
         HasilSeeder::class,
         WilayahSeeder::class,
+        PengukuranSeeder::class,
     ]);
     }
 }

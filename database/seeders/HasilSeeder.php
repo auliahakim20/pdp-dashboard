@@ -15,7 +15,7 @@ class HasilSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['name' => 'Pengujian ke-1', 
+            ['name' => 'Pengujian', 
             'tanggal' => '2026-08-01', 
             'accuracy' => 85.50, 
             'recall' => 82.30, 
