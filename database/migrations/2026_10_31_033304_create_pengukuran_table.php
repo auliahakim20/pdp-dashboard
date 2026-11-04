@@ -16,7 +16,6 @@ class CreatePengukuranTable extends Migration
         Schema::create('pengukuran', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('ph', 6, 4);
             $table->decimal('tds', 8, 2);
             $table->decimal('turbidity', 8, 2);
             $table->decimal('temperature', 6, 2);

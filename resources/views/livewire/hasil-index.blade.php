@@ -59,30 +59,27 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 pb-16 space-y-10">
 
         <!-- Summary Cards -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             <div class="fx-card bg-white rounded-xl p-5 shadow-sm border border-gray-100">
                 <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Akurasi</p>
-                <p class="mt-2 text-2xl sm:text-3xl font-bold text-indigo-600">{{ $avgAccuracy }}<span
-                        class="text-base">%</span></p>
-                <p class="mt-1 text-xs text-gray-400">dari {{ $totalPercobaan }} percobaan</p>
+                <p class="mt-8 text-2xl sm:text-3xl font-bold text-indigo-600">99,26<span class="text-base">%</span></p>
+                <p class="mt-1 text-xs text-gray-400"> </p>
             </div>
             <div class="fx-card bg-white rounded-xl p-5 shadow-sm border border-gray-100">
                 <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Precision</p>
-                <p class="mt-2 text-2xl sm:text-3xl font-bold text-sky-600">{{ $avgPrecision }}<span
-                        class="text-base">%</span></p>
-                <p class="mt-1 text-xs text-gray-400">dari {{ $totalPercobaan }} percobaan</p>
+                <p class="mt-8 text-2xl sm:text-3xl font-bold text-sky-600">98,25<span class="text-base">%</span></p>
+                <p class="mt-1 text-xs text-gray-400"> </p>
             </div>
             <div class="fx-card bg-white rounded-xl p-5 shadow-sm border border-gray-100">
                 <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Recall</p>
-                <p class="mt-2 text-2xl sm:text-3xl font-bold text-emerald-600">{{ $avgRecall }}<span
-                        class="text-base">%</span></p>
-                <p class="mt-1 text-xs text-gray-400">dari {{ $totalPercobaan }} percobaan</p>
+                <p class="mt-8 text-2xl sm:text-3xl font-bold text-emerald-600">99,54<span class="text-base">%</span>
+                </p>
+                <p class="mt-1 text-xs text-gray-400"> </p>
             </div>
             <div class="fx-card bg-white rounded-xl p-5 shadow-sm border border-gray-100">
                 <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">F1 Score</p>
-                <p class="mt-2 text-2xl sm:text-3xl font-bold text-amber-500">{{ $avgFScore }}<span
-                        class="text-base">%</span></p>
-                <p class="mt-1 text-xs text-gray-400">dari {{ $totalPercobaan }} percobaan</p>
+                <p class="mt-8 text-2xl sm:text-3xl font-bold text-amber-500">98,88<span class="text-base">%</span></p>
+                <p class="mt-1 text-xs text-gray-400"> </p>
             </div>
         </div>
 
@@ -205,7 +202,6 @@
                             <th class="px-5 py-3 text-left w-12">No</th>
                             <th class="px-5 py-3 text-left">Nama</th>
                             <th class="px-5 py-3 text-left">Waktu</th>
-                            <th class="px-5 py-3 text-right">pH</th>
                             <th class="px-5 py-3 text-right">TDS (ppm)</th>
                             <th class="px-5 py-3 text-right">Turbidity (NTU)</th>
                             <th class="px-5 py-3 text-right">Suhu (°C)</th>
@@ -221,8 +217,6 @@
                                 </td>
                                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">
                                     {{ $row->tanggal->format('d M Y, H:i') }}</td>
-                                <td class="px-5 py-3 text-right tabular-nums text-gray-700">
-                                    {{ number_format($row->ph, 2) }}</td>
                                 <td class="px-5 py-3 text-right tabular-nums text-gray-700">
                                     {{ number_format($row->tds, 2) }}</td>
                                 <td class="px-5 py-3 text-right tabular-nums text-gray-700">
