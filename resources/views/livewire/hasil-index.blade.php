@@ -47,11 +47,16 @@
     <!-- Hero -->
     <div class="bg-gradient-to-br from-indigo-600 to-indigo-800">
         <div class="max-w-7xl mx-auto py-14 px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-indigo-200 text-xs sm:text-sm font-semibold tracking-widest uppercase">Penelitian Kualitas Air
-                Berbasis IoT</p>
-            <h1 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Dashboard Hasil Pengujian</h1>
+            <p class="text-indigo-200 text-xs sm:text-sm font-semibold tracking-widest uppercase"> Water Monitoring and
+                Evaluation using K-Nearest Neighbor in Kendal </p>
+            <h1 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Test Results Dashboard</h1>
             <p class="mt-3 max-w-2xl mx-auto text-indigo-100 text-sm sm:text-base">
-                Ringkasan performa model klasifikasi kualitas air dari setiap percobaan pengujian.
+                This is an application based on Artificial Intelligence (AI) and the Internet of Things (IoT)
+                technologies, designed to monitor and assess water quality in Kendal Regency.
+                In this evaluation process, the K-Nearest Neighbour (KNN) algorithm is applied as a machine
+                learning-based classification method. This algorithm is used to determine water quality categories based
+                on the characteristics of measured parameters by comparing them against historical data or datasets that
+                have already been labelled with classifications.
             </p>
         </div>
     </div>
@@ -61,7 +66,7 @@
         <!-- Summary Cards -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             <div class="fx-card bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-                <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Akurasi</p>
+                <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Accuracy</p>
                 <p class="mt-8 text-2xl sm:text-3xl font-bold text-indigo-600">99,26<span class="text-base">%</span></p>
                 <p class="mt-1 text-xs text-gray-400"> </p>
             </div>
@@ -82,7 +87,6 @@
                 <p class="mt-1 text-xs text-gray-400"> </p>
             </div>
         </div>
-
         <!-- Tren TDS -->
         <div wire:ignore class="fx-card" data-tilt="soft"
             style="background:#fff; border:1px solid #bae6fd; border-radius:28px; padding:24px; box-shadow:0 1px 3px rgba(15,23,42,0.06);">
@@ -92,11 +96,12 @@
                     <p
                         style="margin:0; font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#0891b2;">
                         Tren TDS</p>
-                    <h3 style="margin:6px 0 0 0; font-size:26px; font-weight:800; color:#0f172a;">Zat terlarut</h3>
+                    <h3 style="margin:6px 0 0 0; font-size:26px; font-weight:800; color:#0f172a;">Total Dissolved Solids
+                    </h3>
                 </div>
                 <span
                     style="background:#ecfeff; color:#0e7490; font-weight:700; font-size:15px; padding:10px 18px; border-radius:16px; white-space:nowrap;">
-                    Rata-rata {{ $tdsAvg }} ppm
+                    Average {{ $tdsAvg }} ppm
                 </span>
             </div>
             <div style="overflow-x:auto;">
@@ -118,11 +123,11 @@
                         <p
                             style="margin:0; font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#d97706;">
                             Tren Turbidity</p>
-                        <h3 style="margin:6px 0 0 0; font-size:26px; font-weight:800; color:#0f172a;">Kekeruhan</h3>
+                        <h3 style="margin:6px 0 0 0; font-size:26px; font-weight:800; color:#0f172a;">Turbidity</h3>
                     </div>
                     <span
                         style="background:#fffbeb; color:#b45309; font-weight:700; font-size:15px; padding:10px 18px; border-radius:16px; white-space:nowrap;">
-                        Rata-rata {{ $turbidityAvg }} NTU
+                        Average {{ $turbidityAvg }} NTU
                     </span>
                 </div>
                 <div style="overflow-x:auto;">
@@ -141,11 +146,11 @@
                         <p
                             style="margin:0; font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#e11d48;">
                             Tren Temperature</p>
-                        <h3 style="margin:6px 0 0 0; font-size:26px; font-weight:800; color:#0f172a;">Suhu air</h3>
+                        <h3 style="margin:6px 0 0 0; font-size:26px; font-weight:800; color:#0f172a;">Temperature</h3>
                     </div>
                     <span
                         style="background:#fff1f2; color:#be123c; font-weight:700; font-size:15px; padding:10px 18px; border-radius:16px; white-space:nowrap;">
-                        Rata-rata {{ $temperatureAvg }} °C
+                        Average {{ $temperatureAvg }} °C
                     </span>
                 </div>
                 <div style="overflow-x:auto;">
@@ -164,8 +169,8 @@
                 style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;">
 
                 <div>
-                    <h3 class="text-base sm:text-lg font-semibold text-gray-800">Riwayat Pengukuran</h3>
-                    <p class="text-xs text-gray-400 mt-0.5">Data sensor kualitas air per sampel</p>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-800">Measurement History</h3>
+                    <p class="text-xs text-gray-400 mt-0.5">Water quality sensor data for each sample</p>
                 </div>
 
                 <div
@@ -176,16 +181,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
                         </svg>
-                        <input type="text" wire:model.debounce.300ms="search" placeholder="Cari nama sampel..."
+                        <input type="text" wire:model.debounce.300ms="search" placeholder="Seacrh location sample..."
                             style="width: 14rem;"
                             class="pl-9 pr-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
 
                     <select wire:model="kualitas" style="width: 11.5rem;"
                         class="py-1.5 pl-3 pr-8 text-sm border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
-                        <option value="">Semua Kualitas</option>
-                        <option value="1">Air Layak Minum</option>
-                        <option value="0">Air Tidak Layak Minum</option>
+                        <option value="">All Qualities</option>
+                        <option value="1">Safe</option>
+                        <option value="0">Unsafe</option>
                     </select>
 
                     <span
@@ -200,20 +205,22 @@
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr class="text-xs font-semibold text-gray-500 uppercase tracking-wider">
                             <th class="px-5 py-3 text-left w-12">No</th>
-                            <th class="px-5 py-3 text-left">Nama</th>
-                            <th class="px-5 py-3 text-left">Waktu</th>
+                            <th class="px-5 py-3 text-left">Location</th>
+                            <th class="px-5 py-3 text-left">Date and Time</th>
                             <th class="px-5 py-3 text-right">TDS (ppm)</th>
                             <th class="px-5 py-3 text-right">Turbidity (NTU)</th>
-                            <th class="px-5 py-3 text-right">Suhu (°C)</th>
-                            <th class="px-5 py-3 text-center">Kualitas</th>
+                            <th class="px-5 py-3 text-right">Temperature (°C)</th>
+                            <th class="px-5 py-3 text-center">Water Quality</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         @forelse ($pengukuran as $row)
                             <tr
                                 class="hover:bg-indigo-50/40 transition-colors {{ $loop->even ? 'bg-gray-50/50' : 'bg-white' }}">
-                                <td class="px-5 py-3 text-gray-400">{{ $pengukuran->firstItem() + $loop->index }}</td>
-                                <td class="px-5 py-3 font-medium text-gray-800 whitespace-nowrap">{{ $row->name }}
+                                <td class="px-5 py-3 text-gray-400">{{ $pengukuran->firstItem() + $loop->index }}
+                                </td>
+                                <td class="px-5 py-3 font-medium text-gray-800 whitespace-nowrap">
+                                    {{ $row->name }}
                                 </td>
                                 <td class="px-5 py-3 text-gray-500 whitespace-nowrap">
                                     {{ $row->tanggal->format('d M Y, H:i') }}</td>
@@ -228,13 +235,13 @@
                                         <span
                                             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">
                                             <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                                            Air Layak Minum
+                                            Safe
                                         </span>
                                     @else
                                         <span
                                             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700">
                                             <span class="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                                            Air Tidak Layak Minum
+                                            Unsafe
                                         </span>
                                     @endif
                                 </td>
@@ -243,9 +250,9 @@
                             <tr>
                                 <td colspan="8" class="px-5 py-10 text-center text-gray-400">
                                     @if ($search !== '' || $kualitas !== '')
-                                        Tidak ada data yang cocok dengan pencarian atau filter
+                                        No results match your search or filters
                                     @else
-                                        Belum ada data pengukuran
+                                        No measurement data is available yet
                                     @endif
                                 </td>
                             </tr>
@@ -258,8 +265,7 @@
                 class="px-5 sm:px-6 py-3 border-t border-gray-200 bg-gray-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <p class="text-xs text-gray-500">
                     @if ($pengukuran->total() > 0)
-                        Menampilkan {{ $pengukuran->firstItem() }}–{{ $pengukuran->lastItem() }} dari
-                        {{ $pengukuran->total() }} data
+                        {{ $pengukuran->total() }} Data
                     @endif
                 </p>
                 <div>

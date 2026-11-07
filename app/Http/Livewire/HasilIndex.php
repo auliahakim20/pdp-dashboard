@@ -35,7 +35,7 @@ class HasilIndex extends Component
                 $query->where('kualitas', $this->kualitas);
             })
             ->orderBy('tanggal')
-            ->paginate(10);
+            ->paginate(20);
 
         // data grafik: semua data, tidak ikut pagination
         $grafik = Pengukuran::orderBy('tanggal')->get();

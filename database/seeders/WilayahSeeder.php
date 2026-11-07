@@ -17,11 +17,7 @@ class WilayahSeeder extends Seeder
            $data = [
             ['nama_kecamatan' => 'Gemuh', 'wilayah' => 'Kabupaten Kendal'],
             ['nama_kecamatan' => 'Cepiring', 'wilayah' => 'Kabupaten Kendal'],
-            ['nama_kecamatan' => 'Brangsong', 'wilayah' => 'Kabupaten Kendal'],
-             ['nama_kecamatan' => 'Boja', 'wilayah' => 'Kabupaten Kendal'],
-            ['nama_kecamatan' => 'Kaliwungu', 'wilayah' => 'Kabupaten Kendal'],
-            ['nama_kecamatan' => 'Kaliwungu Selatan', 'wilayah' => 'Kabupaten Kendal'],
-            ['nama_kecamatan' => 'Kangkung', 'wilayah' => 'Kabupaten Kendal'],
+            ['nama_kecamatan' => 'Boja', 'wilayah' => 'Kabupaten Kendal'],
             ['nama_kecamatan' => 'Kendal', 'wilayah' => 'Kabupaten Kendal'],
             ['nama_kecamatan' => 'Ringinarum', 'wilayah' => 'Kabupaten Kendal'],
             ['nama_kecamatan' => 'Weleri', 'wilayah' => 'Kabupaten Kendal'],

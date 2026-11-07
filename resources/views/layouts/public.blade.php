@@ -119,7 +119,7 @@
 
                 <!-- Brand -->
                 <div class="flex items-center gap-2">
-                    <span class="text-xl">🌊</span>
+
                     <span class="font-bold text-lg text-indigo-600">{{ config('app.name') }}</span>
                 </div>
 
@@ -129,12 +129,12 @@
 
                     <a href="{{ route('pengujian.index') }}"
                         class="nav-link {{ request()->routeIs('pengujian.index') || request()->routeIs('home') ? 'is-active' : '' }}">
-                        Hasil Pengujian
+                        Result
                     </a>
 
                     <a href="{{ route('wilayah.index') }}"
                         class="nav-link {{ request()->routeIs('wilayah.index') ? 'is-active' : '' }}">
-                        Wilayah Dataset
+                        Dataset
                     </a>
                 </div>
 
@@ -147,7 +147,8 @@
     </main>
 
     <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-xs text-gray-400">
-        © {{ date('Y') }} {{ config('app.name') }} — Penelitian Kualitas Air Berbasis IoT
+        © {{ date('Y') }} {{ config('app.name') }} — Water Monitoring and Evaluation using K-Nearest Neighbor in
+        Kendal
     </footer>
 
     @livewireScripts
